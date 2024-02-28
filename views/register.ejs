@@ -1,0 +1,98 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/css/form.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%-include('partials/nav.ejs')%>
+    <h1>Register</h1>
+    
+    <form action="/register" method="post">
+      <input type="text" name="fullName" placeholder="Full Name" />
+      <input type="text" name="username" placeholder="Username" />
+      <input type="password" name="password" placeholder="Password" />
+      <input type="submit" value="Register" />
+    </form>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d4d3e2; /* Background color */
+        }
+
+        form {
+            background: linear-gradient(135deg, #252725, #2092f0); /* Gradient background with increased transparency */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 50px auto; /* Center the form horizontally and add some margin from top */
+            max-width: 500px; /* Increase the maximum width of the form */
+        }
+
+        h1 {
+            text-align: center;
+            color: #333; /* Header text color */
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            display: block;
+            width: calc(100% - 20px); /* Adjust the width to accommodate padding */
+            padding: 12px;
+            margin: 10px auto; /* Center the inputs horizontally and add margin between them */
+            border-radius: 5px;
+            border: 1px solid #ccc; /* Border color */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+
+        input[type="submit"] {
+            background-color: #0069d9; /* Button background color */
+            color: #fff; /* Button text color */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Button background color on hover */
+        }
+        footer {
+            background-color: #333; /* Footer background color */
+            color: #fff; /* Text color */
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <%-include('partials/nav.ejs')%>
+    <h1>Register</h1>
+    
+    <form action="/register" method="post">
+        <input type="text" name="fullName" placeholder="Full Name" />
+        <input type="text" name="username" placeholder="Username" />
+        <input type="password" name="password" placeholder="Password" />
+        <input type="submit" value="Register" />
+    </form>
+    <footer>
+        <p>&copy; 2024 Your Predictor App. All rights reserved.</p>
+    </footer>
+</body>
+</html>

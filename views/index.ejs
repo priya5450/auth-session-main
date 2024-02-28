@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/css/home.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <%-include('partials/nav.ejs')%>
+    <header>
+      <h1>Ebike & Cycle Count Prediction</h1>
+      
+      <p>Welcome to Predictor</p>
+    </header>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d4d3e2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+            text-align: center;
+            background: linear-gradient(135deg, #252725, #2092f0); /* Gradient background */
+            color: #fff; /* Text color */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            margin-bottom: 20px;
+        }
+
+        .card button {
+            background-color: #fff;
+            color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .card button:hover {
+            background-color: #d4d3e2;;
+        }
+        footer {
+            background-color: #333; /* Footer background color */
+            color: #fff; /* Text color */
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+  <%-include('partials/nav.ejs')%>
+    <header style="text-align: center; margin-top: 50px; color: #333;">
+        <h1>Welcome to Predictor</h1>
+        <h2>Ebike & Cycle Count Prediction</h2>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Live Location</h2>
+            <p>Stay updated with real-time tracking of e-bikes and cycle stations near you. Our live location feature provides accurate information on available bikes, stations, and routes, ensuring a seamless riding experience.</p>
+            <button id="exploreBtn">Explore</button> <!-- Added id attribute -->
+        </div>
+        <div class="card">
+            <h2>Language</h2>
+            <p>Enjoy our platform in your preferred language. Our language feature offers multilingual support, allowing you to navigate through the application with ease. Choose from a variety of languages to personalize your experience.</p>
+            <button>Select Language</button>
+        </div>
+        <div class="card">
+            <h2>E-bike Count</h2>
+            <p>Track the availability of e-bikes in your area with our e-bike count feature. Whether you're planning a commute or leisure ride, our platform provides real-time updates on e-bike availability, ensuring you never miss out on a ride.</p>
+            <button>Check Availability</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Your Predictor App. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Add event listener to the "Explore" button
+        document.getElementById('exploreBtn').addEventListener('click', function() {
+            // Redirect to the location.ejs page
+            window.location.href = '/auth-session-main/views/location.ejs';
+        });
+    </script>
+</body>
+</html>
